@@ -1,5 +1,5 @@
 from flask import Blueprint
-from ..controllers.users_controller import (
+from src.api.services.controllers.users_controller import (
     create_user, get_users, get_user,
     update_user, delete_user, join_event, leave_event, get_user_events
 )

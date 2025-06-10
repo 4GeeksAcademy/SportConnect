@@ -1,7 +1,7 @@
 from flask import request, jsonify
-from ...models import db, Event, User
+from src.api.models import db, Event, User
 from sqlalchemy.exc import SQLAlchemyError
-from ...utils import token_required
+from src.api.utils import token_required
 from flask_jwt_extended import verify_jwt_in_request, get_jwt_identity
 
 # @jwt_required()  # Este decorador asegura que solo un usuario autenticado pueda crear eventos

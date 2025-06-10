@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask_jwt_extended import jwt_required
-from ..controllers.events_controller import (
+from src.api.services.controllers.events_controller import (
     create_event,
     get_events,
     get_event,
