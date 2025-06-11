@@ -18,6 +18,7 @@ export const createEvent = async (data) => {
   if (!res.ok) throw new Error("Error al crear evento");
   return res.json();
 };
+// Fetch a single post by ID
 export const registerUser = async (data) => {
   const res = await fetch(`${BASE_URL}/api/auth/register`, {
     method: "POST",
