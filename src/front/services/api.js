@@ -6,7 +6,7 @@ export const fetchPosts = async () => {
   if (!res.ok) throw new Error("Error al obtener eventos");
   return res.json();
 };
-
+// Fetch a single post by ID
 export const createEvent = async (data) => {
   const res = await fetch(`${BASE_URL}/api/events/`, {
     method: "POST",
