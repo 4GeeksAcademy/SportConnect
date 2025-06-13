@@ -56,6 +56,10 @@ def create_event():  # Recibimos el usuario autenticado desde el decorador
 
 def get_events():
     difficulty = request.args.get('difficulty')
+    sport = request.args.get('sport')
+
+    if sport and sport.lower() != 'all':
+        events = Event.query.filter_by(sport=sport).all()
     if difficulty:
         events = Event.query.filter_by(difficulty=difficulty).all()
     else:
